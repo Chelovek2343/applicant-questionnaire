@@ -8,23 +8,22 @@ certificate = int(input('Do you have certificate? : \n'
                     'Enter your answer: '))
 
 
-
-if certificate in range(0,2):
-    ort = int(input('Enter your score on ORT: '))
-    english_level = input('Enter your English language proficiency level: \n'
-                        '1 - A1 \n'
-                        '2 - A2 \n'
-                        '3 - B1 \n'
-                        '4 - B2 \n'
-                        '5 - C1 \n'
-                        '6 - C2 \n'
-                        'Enter your level: ')
-
-    system('cls')
-
+def check_things():
     boo_certificate = bool(certificate)
 
-    def faculity_func():
+    if(boo_certificate == False or ort < 110):
+        print('U did not enroll')
+
+    elif(boo_certificate == True and ort >= 110 and english_level == '1' or english_level == '2'):
+        print('Take a one-year preparatory English language course (Foundation Course AIU) at the university. Then next year, after completing that course, you will be able to enroll the university')
+
+    else:
+        print('Your applicant is recommended for admission to university')
+        time.sleep(1)
+        system('cls')
+        faculity_func()
+
+def faculity_func():
         system('cls')
         faculities = print('Choose your faculity: \n'
                         '1 - Computer Engineering 2500$ \n'
@@ -78,19 +77,19 @@ if certificate in range(0,2):
         else:
             print(f'Dear {name}, we congratulate you! You have been admitted to the {choice[0]} program at Ala-Too International University. The cost of your tuition will be {choice[1]}$ per year.')
 
-    def check_things():
-        if(boo_certificate == False or ort < 110):
-            print('U did not enroll')
 
-        elif(boo_certificate == True and ort >= 110 and english_level == '1' or english_level == '2'):
-            print('Take a one-year preparatory English language course (Foundation Course AIU) at the university. Then next year, after completing that course, you will be able to enroll the university')
+if certificate in range(0,2):
+    ort = int(input('Enter your score on ORT: '))
+    english_level = input('Enter your English language proficiency level: \n'
+                        '1 - A1 \n'
+                        '2 - A2 \n'
+                        '3 - B1 \n'
+                        '4 - B2 \n'
+                        '5 - C1 \n'
+                        '6 - C2 \n'
+                        'Enter your level: ')
 
-        else:
-            print('Your applicant is recommended for admission to university')
-            time.sleep(1)
-            system('cls')
-            faculity_func()
-
+    system('cls')
 
     check_things()
 else:
