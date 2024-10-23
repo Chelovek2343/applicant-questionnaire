@@ -7,19 +7,20 @@ certificate = int(input('Do you have certificate? : \n'
                     '1 - avaliable \n'
                     'Enter your answer: '))
 
-ort = int(input('Enter your score on ORT: '))
-english_level = input('Enter your English language proficiency level: \n'
-                    '1 - A1 \n'
-                    '2 - A2 \n'
-                    '3 - B1 \n'
-                    '4 - B2 \n'
-                    '5 - C1 \n'
-                    '6 - C2 \n'
-                    'Enter your level: ')
 
-system('cls')
 
 if certificate in range(0,2):
+    ort = int(input('Enter your score on ORT: '))
+    english_level = input('Enter your English language proficiency level: \n'
+                        '1 - A1 \n'
+                        '2 - A2 \n'
+                        '3 - B1 \n'
+                        '4 - B2 \n'
+                        '5 - C1 \n'
+                        '6 - C2 \n'
+                        'Enter your level: ')
+
+    system('cls')
 
     boo_certificate = bool(certificate)
 
@@ -93,4 +94,4 @@ if certificate in range(0,2):
 
     check_things()
 else:
-    print('Please choose between 0 or 1 in certificate')
+    print('Restart the program and choose between 0 or 1 in certificate')
